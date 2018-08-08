@@ -7,19 +7,20 @@
   
   
   
-  <title>Good Food Blog</title>
+  <title>Good-Food-Api-Document | Good Food Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="紀錄開發相關文件跟筆記">
-<meta name="keywords" content="monospace react">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Good Food Blog">
-<meta property="og:url" content="https://monospacetw.github.io/index.html">
+  <meta name="description" content="Good Food API Document登入route: /api/admin/loginmethod: POST header:  request: 1234&amp;#123;  &quot;email&quot;: &quot;a@b.c&quot;, // email  &quot;password&quot;: &quot;12345678&quot; //密碼&amp;#125; response: 1234&amp;#123;    &quot;token&quot;: &quot;user_token&quot;,">
+<meta name="keywords" content="documents">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Good-Food-Api-Document">
+<meta property="og:url" content="https://monospacetw.github.io/2018/08/08/good-food-api-document/index.html">
 <meta property="og:site_name" content="Good Food Blog">
-<meta property="og:description" content="紀錄開發相關文件跟筆記">
+<meta property="og:description" content="Good Food API Document登入route: /api/admin/loginmethod: POST header:  request: 1234&amp;#123;  &quot;email&quot;: &quot;a@b.c&quot;, // email  &quot;password&quot;: &quot;12345678&quot; //密碼&amp;#125; response: 1234&amp;#123;    &quot;token&quot;: &quot;user_token&quot;,">
 <meta property="og:locale" content="ZH-TW">
+<meta property="og:updated_time" content="2018-08-08T14:54:35.969Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Good Food Blog">
-<meta name="twitter:description" content="紀錄開發相關文件跟筆記">
+<meta name="twitter:title" content="Good-Food-Api-Document">
+<meta name="twitter:description" content="Good Food API Document登入route: /api/admin/loginmethod: POST header:  request: 1234&amp;#123;  &quot;email&quot;: &quot;a@b.c&quot;, // email  &quot;password&quot;: &quot;12345678&quot; //密碼&amp;#125; response: 1234&amp;#123;    &quot;token&quot;: &quot;user_token&quot;,">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -31,9 +32,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -44,8 +42,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -262,80 +260,7 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-create-new-post" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/08/08/create-new-post/" class="article-date">
-      <time datetime="2018-08-08T14:35:37.000Z" itemprop="datePublished">2018-08-08</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/08/08/create-new-post/">Create-New-Post</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="install-Hexo"><a href="#install-Hexo" class="headerlink" title="install Hexo"></a>install Hexo</h1><p><a href="https://hexo.io/zh-tw/docs/" target="_blank" rel="noopener">hexo</a></p>
-<h1 id="Initial-Project"><a href="#Initial-Project" class="headerlink" title="Initial Project"></a>Initial Project</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> git@github.com:MonospaceTW/monospacetw.github.io.git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo server</span></span><br></pre></td></tr></table></figure>
-<h1 id="基本操作與套件"><a href="#基本操作與套件" class="headerlink" title="基本操作與套件"></a>基本操作與套件</h1><p><a href="https://hexo.io/zh-tw/docs/commands" target="_blank" rel="noopener">指令</a></p>
-<p><a href="https://marketplace.visualstudio.com/items?itemName=codeyu.vscode-hexo" target="_blank" rel="noopener">vscode extension</a></p>
-<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><p><strong>html 部署在 master</strong></p>
-<p><strong>source Code 放在 branch source</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo clean</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo g</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo d</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/hexo/">hexo</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-good-food-api-document" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-good-food-api-document" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a  href="/2018/08/08/good-food-api-document/" class="article-date">
@@ -352,13 +277,28 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/08/08/good-food-api-document/">Good-Food-Api-Document</a>
+    <h1 class="article-title" itemprop="name">
+      Good-Food-Api-Document
     </h1>
   
 
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/monospace/">monospace</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/documents/">documents</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -392,223 +332,139 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/monospace/">monospace</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/documents/">documents</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-good-food-coding-style" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/08/08/good-food-coding-style/" class="article-date">
-      <time datetime="2018-08-08T04:22:22.000Z" itemprop="datePublished">2018-08-08</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+
+<nav id="article-nav">
+  
+    <a  href="/2018/08/08/create-new-post/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
         
+          Create-New-Post
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/08/08/good-food-coding-style/">Guidlines and Best Practices</a>
-    </h1>
   
+    <a  href="/2018/08/08/good-food-coding-style/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Guidlines and Best Practices</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="goodfood-Slack-app-Guidlines-and-Best-Practices"><a href="#goodfood-Slack-app-Guidlines-and-Best-Practices" class="headerlink" title="goodfood Slack app Guidlines and Best Practices"></a>goodfood Slack app Guidlines and Best Practices</h1><p>開發上每位開發者都會去互相維護修改其他開發者的程式碼, 因此有良好的寫作風格與共同的習慣可以幫忙更方便快速的code review以及除錯。</p>
-<p>這裡基本撰寫原則, 以及如何撰寫來避免一些常見的開發錯誤。 歡迎補充與指正。</p>
-<blockquote>
-<p>“So if you want to go fast, if you want to get done quickly, if you want your code to be easy to write, make it easy to read.”<br>― <a href="https://www.goodreads.com/author/show/45372.Robert_C_Martin" target="_blank" rel="noopener">Robert C. Martin</a>, <a href="https://www.goodreads.com/work/quotes/3779106" target="_blank" rel="noopener">Clean Code: A Handbook of Agile Software Craftsmanship</a></p>
-</blockquote>
-<h2 id="Code-Guildlines"><a href="#Code-Guildlines" class="headerlink" title="Code Guildlines"></a>Code Guildlines</h2><p>主要依據 <a href="https://google.github.io/styleguide/jsguide.html" target="_blank" rel="noopener">Google JavaScript Style Guide</a></p>
-<p>加上一些風格如下:</p>
-<ul>
-<li><p>縮排為2格空白</p>
-</li>
-<li><p>變數命名採用駝峰式命名(lower camel case), <strong>當為了強調是由資料庫欄位名字過來, 命名會使用連字號方式, 像是 member_id</strong> (全小寫, 底線連字號)</p>
-</li>
-<li><p>常數或是共用變數, 採用 全大寫+連字號, 例如:  <code>AAA_BBB_CCC</code></p>
-</li>
-<li><p>字串<strong>一律使用單引號</strong></p>
-</li>
-<li><p>每個述句(statement)後面都需要結尾分號</p>
-</li>
-<li><p>相關聯的程式碼述句(statements)請放在一起, 不同性質的程式碼述句建議使用空白行隔開,  不一定要在第一次開發功能的時候拆分或是重構程式碼, 但是將現有相關述句用分行隔開有利於接手的開法者閱讀</p>
-</li>
-<li><p><strong>注意:</strong> VsCode需要安裝 <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target="_blank" rel="noopener">ESLint plugin</a> 才會正常顯示ESLint所標示的錯誤</p>
-</li>
-</ul>
-<h2 id="提交程式碼前"><a href="#提交程式碼前" class="headerlink" title="提交程式碼前"></a>提交程式碼前</h2><ul>
-<li><p>利用IDE檢查有沒有哪些被ESLint標出紅字, <strong>檢查拼字有無錯誤(變數, 字串)</strong> 有沒有少寫個n, <strong>哪些module沒有import到</strong>, 如果有寫測試, 要重新跑一次測試確認是否都正常</p>
-</li>
-<li><p><strong>檢查排版</strong>, 該有的空格, 縮排有沒有正確,  <strong>過長, 或過度複雜的運算式應該分行</strong>(例如 FP風格的mapping,filter, reduce) , 更新的排版commit一次</p>
-</li>
-<li><p>移除沒有用到的除錯用的 <code>console.log</code> 以及不必要的註解,  commit一次</p>
-</li>
-<li><p>如果你寫的是前端, 那請打開dev tool 看console有沒有警告 (例如 array components 少加了key參數)</p>
-</li>
-<li><p><strong>變數命名必須要能表示:  做什麼用, 為什麼會出現在這裡,  可以如何使用</strong> (如果還需要註解, 那這個名字可以沒有辦法展現該變數的意圖), 如果在同個modules裡面一個叫做 <code>productInfo</code>, 一個叫做 <code>productData</code>,  一個叫做<code>product</code> 那 review 會很頭痛</p>
-</li>
-<li><p>變數名字要可以發音念得出來</p>
-</li>
-<li><p>變數命名方式, 因為JS沒有type check, 所以有些可以明白的寫出讓人理解回傳值是什麼 , 例如 : <code>hasMember</code>, <code>isEmpty</code></p>
-</li>
-<li><p>變數命名方式可以省略贅字 (舉例),  單一個匿名函數的變數在不影響閱讀下, 可以用短變數名字(舉例)  <strong>變數命名的長度應該跟其scope大小相呼應</strong></p>
-</li>
-<li><p>假設在同一個module裡,   <code>A</code> method 使用到 <code>B</code> method,  那 <code>B</code> method 應該會排在 <code>A</code> method上方: </p>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> B = <span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> A = <span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>幾乎, 不應該會出現 <code>var</code></p>
-</li>
-<li><p>每一段程式碼都是一段思緒, 不用急著拆分method, 請<strong>利用空白行來分隔這些思緒</strong>。</p>
-</li>
-<li><p>變數的宣告應該盡量靠近變數被使用到的地方。 以後如果這組程式碼片段要拆分, 也比較方便。</p>
-</li>
-<li><p>Method請維持單一職責原則(Single Responsibility Principle), 一個method只處理一件事情, 這樣也方便撰寫測試與除錯, <strong>查看你method有沒有違反這個原則, 只要你能從這個method抽出另外一個method就是了</strong></p>
-</li>
-</ul>
-<p>例如若有一個method: <code>loginUserAndGetGroups()</code> 就代表你可能需要拆成兩個methods: <code>loginUser()</code> 和 <code>getGroups()</code></p>
-<p>再來就需要觀察這拆分的methods有沒有成群出現的跡象, 如果有, 就可以考慮寫一個wrapper method: </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">getShows();</span><br><span class="line">getMovies();</span><br><span class="line">getMusic();</span><br><span class="line"></span><br><span class="line">getUserMedia()&#123;</span><br><span class="line">  getShows();</span><br><span class="line">  getMovies();</span><br><span class="line">  getMusic();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>Method名字可以說明method所做的事情, <strong>如果你的method內容改了, 請務必檢查method名字有沒有辦法說明你改動的內容</strong> ,  變數命名應該描述可能的副作用(side effects) –&gt; <strong>函式名稱要說到做到</strong></p>
-</li>
-<li><p>盡量遵守immutable方式, method傳入的參數, 禁止直接使用該參數來做修改, 這樣會不知道跟原來的差別是什麼（可以透過 ESLint <a href="https://eslint.org/docs/rules/no-param-reassign#disallow-reassignment-of-function-parameters-no-param-reassign" target="_blank" rel="noopener">no-param-reassign</a> 檢查） </p>
-</li>
-</ul>
-<p><strong>bad</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arrayPush = <span class="function">(<span class="params">arr</span>) =&gt;</span> &#123;</span><br><span class="line">  arr.push(<span class="string">'oh!'</span>)</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> newArr = arrayPush([]);</span><br></pre></td></tr></table></figure></p>
-<p><strong>good</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arrayPush = <span class="function">(<span class="params">arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> [...arr, <span class="string">'ya!'</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> newArr = arrayPush([]);</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>Return Early pattern : 降低程式碼數量,  降低邏輯複雜度,  提升可讀性, 避免不必要的運算</li>
-</ul>
-<p>例如 (<a href="https://forum.freecodecamp.org/t/the-return-early-pattern/19364" target="_blank" rel="noopener">範例來源</a>): </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> willItBlend = <span class="function"><span class="params">obj</span> =&gt;</span> &#123; </span><br><span class="line">	<span class="keyword">let</span> itWillBlend = <span class="literal">false</span>; </span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">typeof</span> someObject === <span class="string">'object'</span>) &#123; </span><br><span class="line">		<span class="keyword">if</span> (someObject.blendable ==== <span class="string">'It will blend'</span>) &#123; </span><br><span class="line">			itWillBlend = <span class="literal">true</span>; </span><br><span class="line">		&#125; <span class="keyword">else</span> &#123; </span><br><span class="line">			itWillBlend = <span class="literal">false</span>; </span><br><span class="line">		&#125; </span><br><span class="line">	&#125; <span class="keyword">else</span> &#123; </span><br><span class="line">		itWillBlend = <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> itWillBlend; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>使用 early return pattern: </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> willItBlend = <span class="function"><span class="params">obj</span> =&gt;</span> &#123; </span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">typeof</span> someObject !== <span class="string">'object'</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">if</span> (someObject.blendable !== <span class="string">'It will blend'</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">return</span>  <span class="literal">true</span>; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>盡量使用 <code>? ... : ...</code> 縮寫降低 <code>if ... else ..</code> 程式碼數量。</li>
-</ul>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">isEmpty</span><br><span class="line">  ? doSomethingWhenEmpty</span><br><span class="line">  : <span class="type">doSomethingWhenNotEmpty</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><p><code>? ... : ...</code> 的內容應該簡短容易理解為主,  如果述句過長應該分行, 如果<code>?</code>或<code>:</code>後面述句有多行, 應該將多行的述句拆出獨立成一個函式</p>
-<ul>
-<li><strong>建議最多一層</strong>   </li>
-</ul>
-</li>
-<li><p>async/await 前先想想, 是不是每個步驟都需要依序執行, 有些東西是可以並行處理的</p>
-<ul>
-<li><code>但是</code>，只要有需要做非同步操作，一定要用 async/await。</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>撰寫 MySQL SQL template string的時候, <strong><a href="https://dev.mysql.com/doc/refman/8.0/en/keywords.html" target="_blank" rel="noopener">Keyword以及保留字</a> 一律大寫</strong>,   <code>AS</code> , <code>OR</code> 都是 keyword要大寫</p>
-</li>
-<li><p>SQL template string 格式應該要縮排, 縮排型式如下: </p>
-</li>
-</ul>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">UPDATE </span><br><span class="line">  helloWorld</span><br><span class="line"><span class="builtin-name">SET</span> </span><br><span class="line">  <span class="attribute">hello</span>=<span class="literal">true</span>,</span><br><span class="line">  <span class="attribute">world</span>=<span class="string">'world'</span>,</span><br><span class="line">  <span class="attribute">token_to_product_id</span>=<span class="variable">$&#123;token_to_product_id&#125;</span></span><br><span class="line">WHERE <span class="attribute">hello</span>=<span class="literal">true</span></span><br><span class="line">  <span class="keyword">AND</span> <span class="attribute">world</span>=<span class="string">'world'</span></span><br></pre></td></tr></table></figure>
-<h2 id="Vscode-推薦套件"><a href="#Vscode-推薦套件" class="headerlink" title="Vscode 推薦套件"></a>Vscode 推薦套件</h2><ul>
-<li>eslint</li>
-<li>Import cost</li>
-<li>Path Intellisense</li>
-<li>Bracket Pair Colorizer</li>
-<li>embrace</li>
-<li>Git History</li>
-<li>GitLens</li>
-<li>markdownlint</li>
-<li>Nord</li>
-<li>npm intellisense</li>
-<li>Partial Diff</li>
-<li>Path Intellisense</li>
-<li>Prettier</li>
-<li>intell</li>
-<li>Rest Client: 搭配 product-service 專案下的 ./test/test.xxx.http 可以取代 postman 直接測試端點</li>
-<li>vscode-icons</li>
-<li>Auto Import</li>
-<li>.ejs</li>
-<li>Code Spell Checker</li>
-<li>TODO Hightlight</li>
-<li>markdown all in one</li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker" target="_blank" rel="noopener">Code Spell Checker</a></li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/monospace/">monospace</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/documents/">documents</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Good-Food-API-Document"><span class="toc-number">1.</span> <span class="toc-text">Good Food API Document</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#登入"><span class="toc-number">1.1.</span> <span class="toc-text">登入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#目前所有的-使用者列表"><span class="toc-number">1.2.</span> <span class="toc-text">目前所有的 使用者列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建立一筆訂單-揪團"><span class="toc-number">1.3.</span> <span class="toc-text">建立一筆訂單(揪團)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#揪團列表"><span class="toc-number">1.4.</span> <span class="toc-text">揪團列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#揪團詳情"><span class="toc-number">1.5.</span> <span class="toc-text">揪團詳情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加訂單"><span class="toc-number">1.6.</span> <span class="toc-text">增加訂單</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.x-git.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
 
+    
 
 
-  
-  
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/2018/08/08/create-new-post/" title="上一篇: Create-New-Post">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2018/08/08/good-food-coding-style/" title="下一篇: Guidlines and Best Practices">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/08/create-new-post/">Create-New-Post</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/08/good-food-api-document/">Good-Food-Api-Document</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/08/good-food-coding-style/">Guidlines and Best Practices</a></li></ul>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.x-git.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
 
 </div>
       <footer id="footer">

@@ -1,5 +1,7 @@
 ---
 title: Guidlines and Best Practices
+date: 2018-8-8 12:22:22
+categories: monospace
 tags: documents
 ---
 
