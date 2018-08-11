@@ -1,11 +1,4 @@
----
-title: Guidlines and Best Practices
-date: 2018-8-8 12:22:22
-categories: monospace
-tags: documents
----
-
-# goodfood Slack app Guidlines and Best Practices
+# Good Food Slack app Guidlines and Best Practices
 
 開發上每位開發者都會去互相維護修改其他開發者的程式碼, 因此有良好的寫作風格與共同的習慣可以幫忙更方便快速的code review以及除錯。
 
