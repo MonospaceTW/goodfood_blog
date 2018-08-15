@@ -21,16 +21,17 @@ response:
 ```json=
     {
         "token": "user_token",
-        "nickName": "tomas"
+        "nickName": "tomas",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MTA4LCJkZXZpY2VUb" // JWT Token
     }
 ```
 
 ## 目前所有的 使用者列表
-route: `/api/admin/users?curPage=1&limit=10`
+route: `/api/admin/users?curPage=1&perPage=10`
 method: `GET`
 
 header:
-    api-token
+    api-token ==> 帶登入回傳的 Authorization
 
 response:
 ```json=
@@ -39,12 +40,19 @@ response:
     "status": 200,
     "message": "successed",
     "data": {
+        "paging": {
+            "curPage": 1,   // 當前頁碼
+            "perPage": 10,  // 每頁幾筆資料
+            "lastPage": 5,  // 最後一頁頁碼
+            "sort": "DESC", // 目前排序規則
+            "total": 50,    // 資料庫總共有幾筆資料
+        },
         "items": [{
             "id": 1,
             "nickName": "q12312",
+            "email": "a@b.c",
             "firebaseId": "aaaa",
-            "createAt": "2018-08-31 00:00:00",
-            "updateAt": "2018-08-31 00:00:00"
+            "createdAt": "2018-08-31 00:00"
         }],
     },
 }
@@ -62,9 +70,10 @@ request:
 ```json=
     {
         "title": 開團名稱
-        "startAt" : 活動開始時間
-        "finishAt" :  結束時間
+        "startedAt" : 活動開始時間
+        "finishedAt" :  結束時間
         "restaurantId": 餐廳ID
+        "remake": 備註
     }
 ```
 
@@ -75,17 +84,17 @@ response:
     "status": 200,
     "message": "successed",
     "data": {
-        "id": "新建 order 的 ID"
+        "id": "新建 GroupOrder 的 ID"
     },
 }
 ```
 ## 揪團列表
 
-route: `/api/admin/groups?curPage=1&limit=10`
+route: `/api/admin/groups?curPage=1&perPage=10`
 method: `GET`
 
 header:
-    api-token
+    api-token ==> 帶登入回傳的 Authorization
 
 
 response:
@@ -95,17 +104,24 @@ response:
     "status": 200,
     "message": "successed",
     "data": {
+        "paging": {
+            "curPage": 1,   // 當前頁碼
+            "perPage": 10,  // 每頁幾筆資料
+            "lastPage": 5,  // 最後一頁頁碼
+            "sort": "DESC", // 目前排序規則
+            "total": 50,    // 資料庫總共有幾筆資料
+        },
         "items": [
             {
-                "id": 訂單 ID
-                "restaurantId": 餐廳ID
-                "name": 餐廳名稱,
-                "imageUrl": 餐廳 logo
-                "address": 地址
-                "phone": 電話
-                "startAt": 開始時間
-                "finishAt": 結束時間
+                "id": 揪團 ID
+                "startedAt": 開始時間
+                "finishedAt": 結束時間
                 "remark": 備註
+                "restaurantId": 餐廳ID
+                "restaurantName": 餐廳名稱,
+                "restaurantImageUrl": 餐廳 logo
+                "restaurantAddress": 地址
+                "restaurantPhone": 電話
             },
             ...
         ]
@@ -120,7 +136,7 @@ route: `/api/admin/groups/{group_id}`
 method: `GET`
 
 header:
-    api-token
+    api-token ==> 帶登入回傳的 Authorization
     
 reqeust:
 ```json=
@@ -134,29 +150,37 @@ response:
     "status": 200,
     "message": "successed",
     "data": {
-        "items": [
-            {
-                "id": 餐廳ID
-                "name": 餐廳名稱,
-                "imageUrl": 餐廳 logo
-                "address": 地址
-                "phone": 電話
-                "startAt": 開始時間
-                "finishAt": 結束時間
-                "remark": 備註
-                "menu": 餐廳菜單 
-                "orders": [
-                    {
-                        "orderId": 訂單 ID
-                        "foodName": 料理名稱
-                        "foodID": 料理 ID
-                        "foodPrice": 料理價格
-                        "count": 幾份
-                        "options": []
-                    },
-                    ...
-                ]
-            }
+        "id": 揪團ID
+        "startedAt": 揪團開始時間
+        "finishedAt": 揪團結束時間
+        "remark": 揪團備註
+        "restarant": {
+            "id" 餐廳 ID
+            "name": 餐廳名稱,
+            "imageUrl": 餐廳 logo
+            "address": 地址
+            "phone": 電話
+            "startAt": 開始營業時間
+            "finishAt": 結束營業時間
+            "remark": 餐廳備註   
+            "foods": [ // 餐廳菜單 --- 有需要在這裡給資料嗎？
+                 { "name": "漢堡1", "price": 100, "remark": "" },
+                 { "name": "漢堡2", "price": 150, "remark": "" },
+            ],
+            "createdAt": "2018-08-31 00:00",
+        },
+        "orders": [{
+            "id": 訂單 ID
+            "price": 料理價格
+            "count": 幾份
+            "subTotal": 小計
+            "remark": 訂單備註
+            "foodId": 料理 ID
+            "foodName": 料理名稱
+            "userId": 1, 
+            "userNickName": "Kent",
+            "createdAt": "2018-08-31 00:00",
+            },
         ]
     }
 }
@@ -172,14 +196,10 @@ headers:
 request:
 ```json=
 {
-    "orders": [
-        {
-            "id": 料理 ID
-            "count": 幾份
-            "options": []
-        },
-        ...
-    ]
+    "groupId": 揪團 ID
+    "foodId": 料理 ID
+    "count": 幾份
+    "remark": "加醬油，不要蔥"
 }
 ```
 
