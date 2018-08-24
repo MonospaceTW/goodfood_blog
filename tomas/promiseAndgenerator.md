@@ -175,10 +175,70 @@ done
 
 而中間先執行 `otherWork`
 
-這個時間差大約 496 ms
+和 `step1` 時間差大約 496 ms
 
 因為 `step1` 和 `otherWork` 的 `setTimeout` 差距了 `500ms`
 
 會造成這樣的結果
 
+為什麼要這樣讓他們依序執行呢？
+
+通常最常見的就是彼此之間會有 `相關性`
+
+例如
+
+```js
+const mockFetch1 = () => new Promise(resolve => {
+  setTimeout(() => resolve(10), 1000);
+});
+
+const mockFetch2 = (mockFetch1Resp) => new Promise(resolve => {
+  setTimeout(() => resolve(fetch1Resp + 5), 1000);
+});
+
+mockFetch1()
+.then(mockFetch2)
+.then(console.log)
+// 15
+```
+
+因為在 `mockFetch2` 中需要 `mockFetch1` 的 response
+
+所以他必須要等到 `mockFetch1` 執行完之後 在執行
+
+這是最簡單的流程控制
+
+但是並不是每一次都只能完成一件事情
+
+`Javascript` 的優點就是在於非同步
+
+可以有效的提高效率
+
+```js
+const mockFetch1 = () => new Promise(resolve => {
+  setTimeout(() => resolve(10), 1000);
+});
+
+const mockFetch2 = ([fetch1Resp, fetch3Resp]) => new Promise(resolve => {
+  setTimeout(() => resolve(fetch1Resp + fetch3Resp), 1000);
+});
+
+const mockFetch3 = () => new Promise(resolve => {
+  setTimeout(() => resolve(2), 1500);
+});
+
+Promise
+  .all([mockFetch1(), mockFetch3()]) //input 是陣列
+  .then(mockFetch2) //output 也是陣列順序對應
+  .then(console.log); // 10 + 2 = 12
+
+```
+
+會同時發送 `mockFetch1` 和 `mockFetch3`
+
+在 `mockFetch2` 用陣列對接到 `mockFetch1` 和 `mockFetch3` 的 response
+
+可以做併發之後再聚合
+
+這是簡單的多個 `Promise` 流程控制
 ## 未完待續
