@@ -1,5 +1,22 @@
 # 圈圈叉叉遊戲
+先初始化所有數值：
+  回合數為0
+  格子的標記狀態為沒有東西（-1沒有、0圈、1叉）
+  預設沒有贏家
+```jsx
+class Board extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      circle: 0,
+      marks: [-1,-1,-1,-1,-1,-1,-1,-1,-1],
+      winner: null,
+    };
+  }
+}
 ```
+### 全部的程式
+```jsx
 import React from 'react';
 import '../App.css';
 
