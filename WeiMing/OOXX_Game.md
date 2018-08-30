@@ -15,6 +15,37 @@ class Board extends React.Component {
   }
 }
 ```
+### css style
+```css
+.board{
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+  border: 5px solid #000000;
+  border-radius: 10px;
+  position: relative;
+}
+.board>.cell{
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 50px;
+  text-align: center;
+  border: 1px solid #000000;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+.board>.line{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 300px;
+}
+```
+
 ### 全部的程式
 ```jsx
 import React from 'react';
