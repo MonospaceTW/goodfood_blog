@@ -3,7 +3,7 @@
   回合數為0
   格子的標記狀態為沒有東西（-1沒有、0圈、1叉）
   預設沒有贏家
-```jsx=
+```jsx
 class Board extends React.Component {
   constructor(props) {
     super(props);
@@ -17,7 +17,7 @@ class Board extends React.Component {
 ```
 
 ### 判斷是否連成一條線
-```jsx=
+```jsx
 checkWinner(marks) {
     //水平方向
     for(let y = 0; y < 3; y++) {
@@ -74,7 +74,7 @@ checkWinner(marks) {
 ```
 
 ## 全部的程式
-```jsx=
+```jsx
 import React from 'react';
 import '../App.css';
 
