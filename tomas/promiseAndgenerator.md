@@ -79,6 +79,18 @@ step1()
 
 在語義上可以有更清楚地描述
 
+## reolsve and reject
+
+在 `Promise` 中預設傳入兩個 `function`
+
+第一個預設為 `resolve`
+
+第二個預設為 `reject`
+
+這個 function name 是可以任意修改的
+
+只是約定成俗會命名為 `resolve` 和 `reject`
+
 但是其實 `Promise` 解決的不只是這個問題
 
 另外也解決了工作流程的問題
@@ -241,4 +253,8 @@ Promise
 可以做併發之後再聚合
 
 這是簡單的多個 `Promise` 流程控制
+
+## Generator
+
+`Generator`
 ## 未完待續
