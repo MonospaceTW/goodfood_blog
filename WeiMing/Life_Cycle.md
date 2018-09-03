@@ -31,8 +31,8 @@
 **所以我們都是可以做複寫動作**
 **如果有要更新這些組件的邏輯就複寫**
 
-## React v16.3 新生命周期
-由於 React 出了新的生命週期 v16.3 ，所以之前所學的生命週期都白費了，那我們就來看看有什麼不一樣吧！
+## [React v16.3 新生命周期](https://juejin.im/post/5aca20c96fb9a028d700e1ce)
+由於 React 出了新的生命週期 v16.3 ，所以之前所學的生命週期都白費了，那我們就來看看有什麼不一樣吧！屆
 
 - 把下面三個組件都去掉
 ```jsx
@@ -49,3 +49,5 @@ staticgetDerivedStateFromProps
 getSnapshotBeforeUpdate
 ```
 **別擔心，那三個舊的在 v16 版本還是可以使用的**
+
+...Coming Soon
