@@ -3,7 +3,7 @@
 `繼承React.Component類別，並且實作render方法，必要的時候會使用自己的建構式。`
 - 有組件後的重要操作
 1. 建立組件，系統會依照下列順序執行
-:::success
+```
   1. constructor(); 系統先呼叫建構式，建構式執行完畢，呼叫componentWillMount
 
   2. componentWillMount(); 表示react正要把這組件繪製到畫面上，接著呼叫render
@@ -11,21 +11,21 @@
   3. render(); 把組件中的邏輯寫進去，然後畫到畫面上，執行componentDidMount
 
   4. componentDidMount(); 3畫到畫面上之後，確定組件已掛載到畫面上，確定後做一些動作
-:::
+```
 
 2. 更新組件 => 更新組件的狀態（畫面）
 
-:::info
+```
   1. componentWillUpdate(); 更新前的預備動作
   2. render(); 更新（重新繪製）
   3. componentDidUpdate(); 確定更新完成
-:::
+```
 
 3. 刪除組件
-:::warning
+```
 1. componentWillUnmount(); 刪除組件前先呼叫這行，組件要被刪除之前讓組有機會做一些工作
+```
 
-:::
 
 **以上這些方法都是定義在React.Component（父類別）裡的**
 **所以我們都是可以做複寫動作**
