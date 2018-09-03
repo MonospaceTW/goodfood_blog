@@ -199,3 +199,13 @@ class Board extends React.Component {
 
 export default Board;
 ```
+
+- 之後會新增的功能有：
+1. 使用者可選擇O或X
+2. 遊戲開始按鈕
+3. 進行遊戲 - 倒數計時，每人10秒
+4. 遊戲結束
+5. 顯示勝利者
+6. 重新開始遊戲 (reset)
+
+- 達成這些後開始做棋盤遊戲
