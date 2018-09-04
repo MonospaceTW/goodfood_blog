@@ -128,11 +128,11 @@ console.log(closureFunc()); //100
 ---
 # JSX語法
 ### 差異
-一般JS語法
-`React.createElement('div', {className: 'hello'}, 'Hello, World')`
-使用JSX語法
-`<div className: 'hello'>Hello, World</div>`
-也就是說我們在寫React的時候可以直接用HTML也是可以的喔。
+一般JS語法<br/>
+`React.createElement('div', {className: 'hello'}, 'Hello, World')`<br/>
+使用JSX語法<br/>
+`<div className: 'hello'>Hello, World</div>`<br/>
+也就是說我們在寫React的時候可以直接用HTML也是可以的喔。<br/>
 通常都是會寫在類別的rander裡：
 ```jsx
 class A extends React.Component {
