@@ -47,3 +47,81 @@ const bar = {
 }
 console.log(bar); // {a: 1, b: 2, c: 3, d: 4, f: 5}
 ```
+
+
+### 定義函數
+很簡單，只要這樣
+```jsx
+//ES5
+var foo = function(){
+  console.log('Hello');
+};
+
+//ES6
+let foo = () => {
+  console.log('Hello');
+}
+```
+簡單來說，就只是把function替換成 =>
+
+如果函數只需要回傳一條陳述句或是運算式的結果時，可省略大括號。
+```jsx
+//ES5
+var foo = function (num1, num2) {
+  return num1 + num2
+};
+
+//ES6
+let foo = (num1, num2) => num1 + num2
+```
+
+函數中只有一個參數，可省略小括號。
+```jsx
+//ES5
+var foo = function(){
+  return num * 2
+};
+
+//ES6
+let foo = num => num*2
+```
+
+箭頭符號還有一個很重要的特性，那就是它所定義的函數中的 this ，會使用外面一層的 this ，也因為這個特性，我們可以用它來定義某些需要外面一層 this 的回呼函數。
+```jsx
+//ES5
+var obj = {
+  foo: 'Hello',
+  greet: function () {
+    var self = this;
+    setTimeout(function () {
+      console.log(self.foo);
+    },1000);
+  }
+}
+obj.greet(); //Hello
+
+//ES6
+let obj = {
+  foo: 'Hello',
+  greet: function () {
+    setTimeout(() => {
+      console.log(this.foo);
+    },1000);
+  }
+}
+obj.greet(); //Hello
+```
+
+### 閉包 Closure
+在JS中中，函數擁有著自己的獨立義域(Domain)，可以宣搞自己的變數在函式裡，且忽略外部相同名稱的變數 / 不被外部相同名稱的變數引響。
+這樣的情況稱之為閉包 Closure
+```jsx
+var x= 50;
+
+function closureFunc() {
+  var x = 100;
+  return x;
+}
+console.log(x); //50
+console.log(closureFunc()); //100
+```
