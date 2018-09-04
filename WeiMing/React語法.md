@@ -125,3 +125,28 @@ function closureFunc() {
 console.log(x); //50
 console.log(closureFunc()); //100
 ```
+---
+# JSX語法
+### 差異
+一般JS語法
+`React.createElement('div', {className: 'hello'}, 'Hello, World')`
+使用JSX語法
+`<div className: 'hello'>Hello, World</div>`
+也就是說我們在寫React的時候可以直接用HTML也是可以的喔。
+通常都是會寫在類別的rander裡：
+```jsx
+class A extends React.Component {
+  rander(){
+    return(
+      <div className: 'hello'>
+        Hello, World
+      </div>
+    )
+  }
+}
+```
+---
+## 工具
+chrome工具：
+  [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+  React Developer Tools 會新增在chrome開發人員選項中。
